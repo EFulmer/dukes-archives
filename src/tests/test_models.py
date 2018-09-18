@@ -1,8 +1,10 @@
 """Unit tests for the database models."""
-# from ..models import Book
+import pytest
+from ..model.book import Book
 
 
 class TestBooks:
     """Tests for the Book model."""
-    def test_inserting_duplicate_isbn_fails(self):
-        pass
+    def test_cannot_create_future_book(self):
+        with pytest.raises(Exception) as e:
+            pass
